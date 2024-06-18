@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - InDissolve
+  - GreenCube
+  - BlueSphere
+  - Win
   layers:
   - Default
   - TransparentFX

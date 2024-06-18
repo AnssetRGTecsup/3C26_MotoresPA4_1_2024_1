@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
 
     public PlayerState CurrentState => currentState;
 
+    [SerializeField] private ObjectivesController objectives;
+
+    private bool greenCube;
+    private bool blueSphere;
+
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -26,8 +31,25 @@ public class PlayerController : MonoBehaviour
         {
             InDissolveController.UpdateFloatTween(_meshRenderer);
         }
+        else if (other.CompareTag("GreenCube"))
+        {
+            objectives.CompleteObjective(0);
+            greenCube = true;
+        }
+        else if (other.CompareTag("BlueSphere"))
+        {
+            objectives.CompleteObjective(1);
+            blueSphere = true;
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Win"))
+        {
+            if (greenCube == true && blueSphere == true)
+            {
+                GameManagerController.Instance.LoadScene("Win");
+            }
+        }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("InDissolve"))

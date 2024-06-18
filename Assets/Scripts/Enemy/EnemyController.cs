@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour
         currentPivot = PivotPositions[currentIndex];
     }
 
+
     [ContextMenu("Add Counter")]
     private void UpdatePivot()
     {
@@ -33,15 +34,13 @@ public class EnemyController : MonoBehaviour
 
         EnemyAgent.SetDestination(currentPivot.position);   
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal)
         {
             EnemyAgent.SetDestination(other.transform.position);
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
