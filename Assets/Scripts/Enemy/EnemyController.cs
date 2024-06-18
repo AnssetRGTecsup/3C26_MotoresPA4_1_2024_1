@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -33,12 +34,24 @@ public class EnemyController : MonoBehaviour
 
         EnemyAgent.SetDestination(currentPivot.position);   
     }
-
+    /*¨private void Update()
+    {
+       // UpdatePivot();
+    }*/
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal)
         {
             EnemyAgent.SetDestination(other.transform.position);
+            SceneManager.LoadScene("DefeatScene");
+        }
+        else if(other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Invisible)
+        {
+            Debug.Log("invisible");
+        }
+        else if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Ghost)
+        {
+            Debug.Log("no interact");
         }
     }
 
