@@ -33,7 +33,19 @@ public class EnemyController : MonoBehaviour
 
         EnemyAgent.SetDestination(currentPivot.position);   
     }
+   
 
+    private void FollowPlayer()
+    {
+        if (playerReference.CurrentState == PlayerState.Normal)
+        {
+            EnemyAgent.SetDestination(playerReference.transform.position);
+        }
+        else
+        {
+            UpdatePivot();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal)
@@ -48,5 +60,9 @@ public class EnemyController : MonoBehaviour
         {
             UpdatePivot();
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        FollowPlayer();
     }
 }

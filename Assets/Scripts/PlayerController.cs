@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState { Normal, Invisible, Ghost}
 
@@ -26,6 +27,13 @@ public class PlayerController : MonoBehaviour
         {
             InDissolveController.UpdateFloatTween(_meshRenderer);
         }
+        else if (other.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene("Derrota");
+        }else if (other.CompareTag("Victoria"))
+        {
+            SceneManager.LoadScene("Victoria");
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -34,5 +42,6 @@ public class PlayerController : MonoBehaviour
         {
             OutDissolveController.UpdateFloatTween(_meshRenderer);
         }
+       
     }
 }
