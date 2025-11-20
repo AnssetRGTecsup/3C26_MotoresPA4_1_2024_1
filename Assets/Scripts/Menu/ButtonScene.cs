@@ -6,7 +6,8 @@ public class ButtonScene : MonoBehaviour
     {
         Jugar,
         MenuPrincipal,
-        Regresar
+        Regresar,
+        Salir
     }
 
     public TipoBoton tipo;
@@ -25,6 +26,9 @@ public class ButtonScene : MonoBehaviour
 
             case TipoBoton.Regresar:
                 SceneEvents.volverMenu();
+                break;
+            case TipoBoton.Salir:
+                SceneEvents.ExitTheGame();
                 break;
 
             default:

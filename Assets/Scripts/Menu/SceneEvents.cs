@@ -6,6 +6,7 @@ public class SceneEvents : MonoBehaviour
     public static event Action OnJugar;
     public static event Action OnVolverMenu;
     public static event Action OnGameOver;
+    public static event Action OnExitTheGame;
 
     public static void Jugar()
     {
@@ -22,4 +23,8 @@ public class SceneEvents : MonoBehaviour
         OnGameOver?.Invoke();
     }
 
+    public static void ExitTheGame()
+    {
+        OnExitTheGame?.Invoke();
+    }
 }

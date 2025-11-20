@@ -8,12 +8,14 @@ public class GestorScene : MonoBehaviour
         SceneEvents.OnJugar += LoadGame;
         SceneEvents.OnVolverMenu += LoadMenu;
         SceneEvents.OnGameOver += LoadGameOver;
+        SceneEvents.OnExitTheGame += Saliendo;
     }
     private void OnDisable()
     {
         SceneEvents.OnJugar -= LoadGame;
         SceneEvents.OnVolverMenu -= LoadMenu;
         SceneEvents.OnGameOver -= LoadGameOver;
+        SceneEvents.OnExitTheGame += Saliendo;
     }
 
     void LoadGame()
@@ -29,5 +31,11 @@ public class GestorScene : MonoBehaviour
     void LoadGameOver()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+    void Saliendo()
+    {
+        Application.Quit();
+        Debug.Log("tesaliste");
     }
 }
