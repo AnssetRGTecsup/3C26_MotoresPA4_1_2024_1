@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "GameInputs",
     "maps": [
         {
@@ -9,7 +10,7 @@
                     "name": "RightClick",
                     "type": "Button",
                     "id": "f0c41c9b-ba1e-4d08-ae00-0cccff5ffcc6",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
