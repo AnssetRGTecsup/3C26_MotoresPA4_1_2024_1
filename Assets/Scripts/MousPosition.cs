@@ -26,11 +26,13 @@ public class MousPosition : MonoBehaviour
 
             if (Physics.Raycast(camRay, out RaycastHit hit))
             {
-                Debug.Log("Raycast shot");
+                //Debug.Log("Raycast shot");
+                //
+                //_WorldPosition = hit.point;
+                //
+                //Instantiate(DummyGO, _WorldPosition, Quaternion.identity);
 
-                _WorldPosition = hit.point;
-
-                Instantiate(DummyGO, _WorldPosition, Quaternion.identity);
+                agent.SetDestination(agent.transform.position);
             }
         }
     }

@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
         EnemyAgent.SetDestination(currentPivot.position);   
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal)
         {
