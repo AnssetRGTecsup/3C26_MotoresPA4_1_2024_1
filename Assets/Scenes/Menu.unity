@@ -980,11 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ec10c11844f5d4d90aa6a8eb4ef978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   tipo: 0
-=======
-  tipo: 1
->>>>>>> Mendoza-Josue
 --- !u!1 &1971592073
 GameObject:
   m_ObjectHideFlags: 0
