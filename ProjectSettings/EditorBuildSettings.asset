@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/SceneVillena/Defeat.unity
+    path: Assets/Villena/SceneVillena/Defeat.unity
     guid: b938657fca99d1043b669fa80d2bd655
   - enabled: 1
-    path: Assets/Scenes/SceneVillena/MainMenu.unity
+    path: Assets/Villena/SceneVillena/MainMenu.unity
     guid: 79a0b0916cc73534cbe25a09d3d92cd9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
