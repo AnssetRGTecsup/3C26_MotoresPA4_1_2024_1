@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - InDissolve
+  - enemy
   layers:
   - Default
   - TransparentFX

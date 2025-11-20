@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 496067250}
   - component: {fileID: 496067249}
   - component: {fileID: 496067248}
+  - component: {fileID: 496067251}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1257,6 +1258,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496067246}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &496067251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496067246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2df66a96e969a34c85e65100e2f8ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &512521929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,6 +1947,7 @@ GameObject:
   - component: {fileID: 880979905}
   - component: {fileID: 880979904}
   - component: {fileID: 880979903}
+  - component: {fileID: 880979906}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2030,6 +2044,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880979901}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &880979906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880979901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2df66a96e969a34c85e65100e2f8ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &946642661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2189,7 @@ GameObject:
   - component: {fileID: 1002228135}
   - component: {fileID: 1002228134}
   - component: {fileID: 1002228133}
+  - component: {fileID: 1002228136}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -2259,6 +2286,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002228131}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1002228136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002228131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2df66a96e969a34c85e65100e2f8ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1137303552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2418,7 @@ GameObject:
   - component: {fileID: 1197481702}
   - component: {fileID: 1197481701}
   - component: {fileID: 1197481700}
+  - component: {fileID: 1197481703}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -2475,6 +2515,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197481698}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1197481703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197481698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2df66a96e969a34c85e65100e2f8ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1329254175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,6 +3157,7 @@ GameObject:
   - component: {fileID: 1764657507}
   - component: {fileID: 1764657506}
   - component: {fileID: 1764657505}
+  - component: {fileID: 1764657508}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3201,6 +3254,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764657503}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1764657508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764657503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2df66a96e969a34c85e65100e2f8ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796005236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,7 +3632,7 @@ GameObject:
   - component: {fileID: 2047527798}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

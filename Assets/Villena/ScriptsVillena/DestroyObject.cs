@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,5 +12,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag== "Player") {
+            Destroy(gameObject);
+        }
     }
 }
