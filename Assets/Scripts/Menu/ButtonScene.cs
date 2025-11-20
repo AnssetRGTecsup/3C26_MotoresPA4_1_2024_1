@@ -24,7 +24,7 @@ public class ButtonScene : MonoBehaviour
                 break;
 
             case TipoBoton.Regresar:
-                SceneEvents.GameOver();
+                SceneEvents.volverMenu();
                 break;
 
             default:
