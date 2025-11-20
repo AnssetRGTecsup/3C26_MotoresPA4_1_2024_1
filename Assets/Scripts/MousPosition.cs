@@ -10,6 +10,7 @@ public class MousPosition : MonoBehaviour
     [SerializeField] private Vector2 _position;
     [SerializeField] private Vector3 _WorldPosition;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private LayerMask layerMask;
 
     public void OnMovement(InputAction.CallbackContext context)
     {
@@ -24,7 +25,7 @@ public class MousPosition : MonoBehaviour
 
             Ray camRay = Camera.main.ScreenPointToRay(_position);
 
-            if (Physics.Raycast(camRay, out RaycastHit hit))
+            if (Physics.Raycast(camRay, out RaycastHit hit, Mathf.Infinity, layerMask))
             {
                 //Debug.Log("Raycast shot");
                 //
@@ -45,7 +46,7 @@ public class MousPosition : MonoBehaviour
 
             Ray camRay = Camera.main.ScreenPointToRay(_position);
 
-            if (Physics.Raycast(camRay, out RaycastHit hit))
+            if (Physics.Raycast(camRay, out RaycastHit hit, Mathf.Infinity, layerMask))
             {
                 Debug.Log("Raycast shot");
 
