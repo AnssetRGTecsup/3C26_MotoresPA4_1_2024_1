@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,12 +17,18 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int currentIndex;
     private Transform currentPivot;
 
+    [SerializeField] EnemyDetectionZone enemyDetectionZone;
+    [SerializeField] LayerMask layerMask;
+    [SerializeField] private float viewDistance = 5;
+
     private void Awake()
     {
         pivotPoints = PivotPositions.Count - 1;
         currentIndex = 0;
 
         currentPivot = PivotPositions[currentIndex];
+        EnemyAgent.SetDestination(currentPivot.position);
+
     }
 
     [ContextMenu("Add Counter")]
@@ -34,17 +41,26 @@ public class EnemyController : MonoBehaviour
         EnemyAgent.SetDestination(currentPivot.position);   
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal)
+        if (other.CompareTag("Player") && playerReference.CurrentState == PlayerState.Normal && enemyDetectionZone.PlayerInColliderZone)
         {
-            EnemyAgent.SetDestination(other.transform.position);
+            if (!Physics.Raycast(EnemyAgent.transform.position, EnemyAgent.transform.forward, Vector3.Distance(EnemyAgent.transform.position, other.transform.position), layerMask) ||
+                !Physics.Raycast(EnemyAgent.transform.position, EnemyAgent.transform.forward, Vector3.Distance(EnemyAgent.transform.position, other.transform.position), layerMask))
+            {
+                Debug.DrawRay(EnemyAgent.transform.position, EnemyAgent.transform.forward * viewDistance, Color.green);
+                EnemyAgent.SetDestination(other.transform.position);
+            }
+            else
+            {
+                Debug.DrawRay(EnemyAgent.transform.position, EnemyAgent.transform.forward * viewDistance, Color.red);
+            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        if (EnemyAgent.transform.position.x == currentPivot.position.x && EnemyAgent.transform.position.z == currentPivot.position.z)
         {
             UpdatePivot();
         }
