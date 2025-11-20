@@ -11,6 +11,7 @@ public class MousPosition : MonoBehaviour
     [SerializeField] private Vector3 _WorldPosition;
     [SerializeField] private NavMeshAgent agent;
 
+    private bool isMoving;
     public void OnMovement(InputAction.CallbackContext context)
     {
         _position = context.ReadValue<Vector2>();
@@ -31,6 +32,8 @@ public class MousPosition : MonoBehaviour
                 _WorldPosition = hit.point;
 
                 Instantiate(DummyGO, _WorldPosition, Quaternion.identity);
+                isMoving = false;
+                agent.ResetPath();
             }
         }
     }
@@ -50,6 +53,7 @@ public class MousPosition : MonoBehaviour
                 _WorldPosition = hit.point;
 
                 agent.SetDestination(_WorldPosition);
+                isMoving=true;
             }
         }
     }
