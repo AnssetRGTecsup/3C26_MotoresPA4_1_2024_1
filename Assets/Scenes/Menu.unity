@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 1958935763}
   - component: {fileID: 1958935762}
   - component: {fileID: 1958935761}
+  - component: {fileID: 1958935764}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -979,7 +980,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ec10c11844f5d4d90aa6a8eb4ef978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   tipo: 0
+=======
+  tipo: 1
+>>>>>>> Mendoza-Josue
 --- !u!1 &1971592073
 GameObject:
   m_ObjectHideFlags: 0
